@@ -19,10 +19,10 @@ dotnet tool install --global dotnet-sonarscanner
 dotnet tool install --global dotnet-coverage
 
 #### Comandos para coleta das informações (os dados de token e nome do projeto são gerados no sonarqube)
-dotnet sonarscanner begin /k:"playlist-merged-producer" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_5091fb2f8faf36b6d398667bcfe2f7bc6dc73f76" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
-dotnet build
-dotnet-coverage collect 'dotnet test' -f xml  -o 'coverage.xml'
-dotnet sonarscanner end /d:sonar.token="sqp_5091fb2f8faf36b6d398667bcfe2f7bc6dc73f76"
+- dotnet sonarscanner begin /k:"key-do-projeto" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="token-do-projeto" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
+- dotnet build
+- dotnet-coverage collect 'dotnet test' -f xml  -o 'coverage.xml'
+- dotnet sonarscanner end /d:sonar.token="token-do-projeto"
 
 ### Sites de Referência
 https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/scanners/dotnet/introduction/?_gl=1*1ldxyic*_gcl_au*MTA5NDU2NDY5My4xNzQxNjMyNzQ5*_ga*MTc4MjUxMDg4LjE3NDE2MzI3NDg.*_ga_9JZ0GZ5TC6*MTc0MTg3ODMyMC4yLjAuMTc0MTg3ODMyMC42MC4wLjA.
