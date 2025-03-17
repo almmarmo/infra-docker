@@ -1,24 +1,24 @@
 ## SonarQube
 
 ### Docker
-- Configuração para elasticsearch
 
+#### Configuração para elasticsearch
 sudo systemctl --system
 
-- Rodar o Docker Compose
+#### Rodar o Docker Compose
 docker-compose up
 
-- Pré-requisito
+#### Pré-requisito
 SDK .NET
 Java instalado na versão suportada pelo server, ou Java17 para o scanner versão 9.2.1
 
-- Instalação do sonar scanner
+#### Instalação do sonar scanner
 dotnet tool install --global dotnet-sonarscanner
 
-- Instalação do dotnet coverage
+#### Instalação do dotnet coverage
 dotnet tool install --global dotnet-coverage
 
-- Comandos para coleta das informações (os dados de token e nome do projeto são gerados no sonarqube)
+#### Comandos para coleta das informações (os dados de token e nome do projeto são gerados no sonarqube)
 dotnet sonarscanner begin /k:"playlist-merged-producer" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_5091fb2f8faf36b6d398667bcfe2f7bc6dc73f76" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
 dotnet build
 dotnet-coverage collect 'dotnet test' -f xml  -o 'coverage.xml'
