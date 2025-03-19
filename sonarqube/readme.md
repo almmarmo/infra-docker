@@ -3,6 +3,11 @@
 ### Docker
 
 #### Configuração para elasticsearch
+Editar o arquivo /etc/sysctl.conf
+Incluir a configuração:
+vm.max_map_count=262144
+
+Executar:
 sudo systemctl --system
 
 #### Rodar o Docker Compose
