@@ -14,8 +14,8 @@ sudo systemctl --system
 docker-compose up
 
 #### Pré-requisito
-SDK .NET
-Java instalado na versão suportada pelo server, ou Java17 para o scanner versão 9.2.1
+- SDK .NET
+- Java instalado na versão suportada pelo server, ou Java17 para o scanner versão 9.2.1
 
 #### Instalação do sonar scanner
 dotnet tool install --global dotnet-sonarscanner
